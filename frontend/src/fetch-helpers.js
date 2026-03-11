@@ -1,6 +1,7 @@
 export const getTrendingGifs = async () => {
   try {
-    const response = await fetch(`/api/gifs`);
+    const url =` /api/gifs`
+    const response = await fetch(url);
 
     if (!response.ok) {
       throw new Error(`Fetch failed with status - ${response.status}, ${response.statusText}`);

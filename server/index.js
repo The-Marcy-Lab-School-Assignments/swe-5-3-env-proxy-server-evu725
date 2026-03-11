@@ -27,7 +27,7 @@ app.use(serveStatic);
 
 const serveGif = async (req, res, next) => {
     try {
-        const url = `https://api.giphy.com/v1/gifs/trending?limit=3&rating=g&api_key=${process.env.API_KEY}`;
+        const url = `https://api.giphy.com/v1/gifs/trending?rating=g&api_key=${process.env.API_KEY}`;
         const response = await fetch(url);
         if(!response.ok) {
             throw Error(`Fetch failed. ${response.status} ${response.statusText}`);
